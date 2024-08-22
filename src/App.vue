@@ -1,127 +1,109 @@
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      nome: "Robert Souza"
+    }
+  }  
+}
+</script>
+
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Componente from './components/ComponenteBlog.vue'
+
 </script>
 
 <template>
-  <header>
-    <img src="../src/assets/logo_filme.png" alt="logo" class="imgl">
+  <div id="cabecalho">
+    <div class="cabecalho-col1">
+    <h1>Etec</h1>
+    </div> 
 
+    <div class="sla">
+      <div class="cabecalho-col1" id="cabecalho-login">
+      <a class="login" href="">login - {{ nome }}</a>
 
-      <img src="../src/assets/filme1.avif" alt="sair" class="img2">
-
-      <select name="sair" id="">
-        <option value="sair">Sair</option>
-        <option value="config">Configurações</option>
-      </select>
-  
-  </header>
-  
-  <main>
-
-    <div class="blog">
-      <div class="imgb">
-        <img src="../src/assets/filme3.jpeg" alt="">
-      </div>
-
-      <div>
-        <div class="descricao">
-          <h1>Alerta vermelho</h1>
-          <p>
-            Um agente do FBI persegue o ladrão de arte mais procurado do mundo. Ele só não esperava ter seu alvo como parceiro para prender uma bandida muito esperta.
-          </p>
-        </div>
-
-        <div class="autor">Autor do blog:    Robert</div>
-        
       </div>
     </div>
+  </div>
+  <h2>post - 1</h2>
+  <Componente />
 
-    <div class="blog">
-      <div class="imgb">
-        <img src="./assets/filme4_563x450.jpeg" alt="">
-      </div>
+  <h2>post - 2</h2>
+  <Componente />
 
-      <div>
-        <div class="descricao">
-          <h1>Wall-E</h1>
-          <p>
-            Wall-E é o último destes robôs, que se mantém em funcionamento graças ao auto-conserto de suas peças. Sua vida consiste em compactar o lixo existente no planeta, que forma torres maiores que arranha-céus, e colecionar objetos curiosos que encontra ao realizar seu trabalho.
-          </p>
-        </div>
+  <h2>post - 3</h2>
+  <Componente />
 
-        <div class="autor">Autor do blog:    Robert</div>
-        
-      </div> 
+  <!-- <div id="area_postagem">
+    <div class="post">
+      post 1
+      <img src="./assets/logo.svg" alt="" width="400px">
+      <h2>Titulo Da Postagem</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit sapien, ullamcorper vel rhoncus at, rhoncus gravida enim. Sed a blandit tellus. Donec porttitor dignissim mollis. Suspendisse hendrerit non risus tincidunt sollicitudin. Etiam consectetur, arcu ac posuere sodales, sapien erat tristique massa, a elementum sapien risus sed velit. Nam id vehicula tortor. In nunc lectus, egestas eu placerat sed, lacinia ac dolor. Ut sit amet magna non ex fermentum ornare id at mi. Integer purus magna, laoreet eget molestie vitae, convallis ut nibh. Vestibulum fermentum mi mi, sed hendrerit risus fermentum auctor. In in quam consequat, euismod justo at, faucibus tortor. Nam lacinia ipsum ut nisi dapibus, non volutpat leo luctus. Sed mollis felis enim, in congue velit tristique quis. Aliquam at neque at mi pulvinar dapibus. Integer mollis malesuada dui, in volutpat nisi porta venenatis. Aenean elit dolor, pretium a rutrum in, fringilla eget turpis.</p>
+      <p class="autor">por Robert Souza</p>
+    </div>
+      
+    <div class="post">
+      post 2
+      <img src="./assets/logo.svg" alt="" width="400px">
+      <h2>Titulo Da Postagem</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit sapien, ullamcorper vel rhoncus at, rhoncus gravida enim. Sed a blandit tellus. Donec porttitor dignissim mollis. Suspendisse hendrerit non risus tincidunt sollicitudin. Etiam consectetur, arcu ac posuere sodales, sapien erat tristique massa, a elementum sapien risus sed velit. Nam id vehicula tortor. In nunc lectus, egestas eu placerat sed, lacinia ac dolor. Ut sit amet magna non ex fermentum ornare id at mi. Integer purus magna, laoreet eget molestie vitae, convallis ut nibh. Vestibulum fermentum mi mi, sed hendrerit risus fermentum auctor. In in quam consequat, euismod justo at, faucibus tortor. Nam lacinia ipsum ut nisi dapibus, non volutpat leo luctus. Sed mollis felis enim, in congue velit tristique quis. Aliquam at neque at mi pulvinar dapibus. Integer mollis malesuada dui, in volutpat nisi porta venenatis. Aenean elit dolor, pretium a rutrum in, fringilla eget turpis.</p>
+      <p class="autor">por Robert Souza</p>
     </div>
 
-    <div class="blog">
-      <div class="imgb">
-        <img src="./assets/harry.webp" alt="">
-      </div>
-
-      <div>
-        <div class="descricao">
-          <h1>Harry Potter</h1>
-          <p>
-            é um garoto órfão de 10 anos que vive infeliz com seus tios, os Dursley. Até que, repentinamente, ele recebe uma carta contendo um convite para ingressar em Hogwarts, uma famosa escola especializada em formar jovens bruxos.
-          </p>
-        </div>
-
-        <div class="autor">Autor do blog:    Robert</div>
-        
-      </div> 
+    <div class="post">
+      post 3
+      <img src="./assets/logo.svg" alt="" width="400px">
+      <h2>Titulo Da Postagem</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit sapien, ullamcorper vel rhoncus at, rhoncus gravida enim. Sed a blandit tellus. Donec porttitor dignissim mollis. Suspendisse hendrerit non risus tincidunt sollicitudin. Etiam consectetur, arcu ac posuere sodales, sapien erat tristique massa, a elementum sapien risus sed velit. Nam id vehicula tortor. In nunc lectus, egestas eu placerat sed, lacinia ac dolor. Ut sit amet magna non ex fermentum ornare id at mi. Integer purus magna, laoreet eget molestie vitae, convallis ut nibh. Vestibulum fermentum mi mi, sed hendrerit risus fermentum auctor. In in quam consequat, euismod justo at, faucibus tortor. Nam lacinia ipsum ut nisi dapibus, non volutpat leo luctus. Sed mollis felis enim, in congue velit tristique quis. Aliquam at neque at mi pulvinar dapibus. Integer mollis malesuada dui, in volutpat nisi porta venenatis. Aenean elit dolor, pretium a rutrum in, fringilla eget turpis.</p>
+      <p class="autor">por Robert Souza</p>
     </div>
+  </div> -->
 
-    
-  </main>
+
 </template>
 
 <style scoped>
-main {
-  margin: 0;
-  padding: 0;
-  position: absolute;
+
+.cabecalho-col1{
+  height: 30px;
+}
+p{
+  width: 1000px;
 }
 
-header{
-  display: inline-flex;
+h2{
+  font-weight: bolder;
 }
 
-.imgl{
-  width: 80px;
-  height: 80px;
-  margin-right: 1300px ;
-}
-
-.img2{
-  width: 50px;
-  height: 40px;
-}
-
-select{
-  width: 50px;
-  height: 40px; 
-}
-
-.blog{
-  background-color: aliceblue ;
-  margin-left: 280px;
-  margin-bottom: 50px;
-  width: 900px;
-  height: 800px;
-  text-align: center
-}
-
-.imgb{
-  padding: 20px;
+h1{
+  font-size: 60px;
 }
 
 .autor{
-  margin-top: 80px
+  font-size: 0.8em;
 }
 
-p{
-  font-size: 20px;
+.post{
+  background-color: gainsboro;
+  margin-top: 20px;
+  padding: 20px;
 }
+
+.cabecalho-col1{
+  display: inline-block;
+}
+
+.sla{
+  text-align: right;
+}
+
+.login{
+  font-size: 40px;
+}
+
+
+  
 </style>
